@@ -27,12 +27,12 @@ You'll need to load a few additional files to use the editor:
 Example
 
 ```HTML
-<script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
-<script type="text/javascript" src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-<script src="bower_components/textAngular/dist/textAngular.js"></script>
-<script src="bower_components/textAngular/dist/textAngularSetup.js"></script>
-<script type="text/javascript" src="/bower_components/angular-schema-form/schema-form.min.js"></script>
-<script type="text/javascript" src="/bower_components/angular-schema-form-text-angular/bootstrap-ta.js"></script>
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="/bower_components/textAngular/dist/textAngular.js"></script>
+<script src="/bower_components/textAngular/dist/textAngularSetup.js"></script>
+<script src="/bower_components/angular-schema-form/schema-form.min.js"></script>
+<script src="/bower_components/angular-schema-form-text-angular/bootstrap-ta.js"></script>
 
 ```
 
