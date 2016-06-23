@@ -1,4 +1,4 @@
-angular.module('schemaForm-tinymce', ['schemaForm', 'tx-tinymce']).config(
+angular.module('schemaForm-textAngular', ['schemaForm', 'textAngular']).config(
 ['schemaFormProvider', 'schemaFormDecoratorsProvider', 'sfPathProvider',
   function(schemaFormProvider,  schemaFormDecoratorsProvider, sfPathProvider) {
 
@@ -16,7 +16,7 @@ angular.module('schemaForm-tinymce', ['schemaForm', 'tx-tinymce']).config(
 
   //Add to the bootstrap directive
     schemaFormDecoratorsProvider.addMapping('bootstrapDecorator', 'wysiwyg',
-    'directives/decorators/bootstrap/tinymce/tinymce.html');
+    'directives/decorators/bootstrap/textAngular/text-angular.html');
     schemaFormDecoratorsProvider.createDirective('wysiwyg',
-    'directives/decorators/bootstrap/tinymce/tinymce.html');
+    'directives/decorators/bootstrap/textAngular/text-angular.html');
   }]);

@@ -1,18 +1,18 @@
-Tinymce add-on
+TextAngular add-on
 =================
 
-This Tinymce add-on uses as the name implies the Tinymce plugin to provide a rich text editor that serves up HTML. [Tinymce](https://github.com/tinymce) as well as Textalk's binder [tx-tinymce](https://github.com/Textalk/tx-tinymce) is used.
+This TextAngular add-on uses as the name implies the TextAngular plugin to provide a rich text editor that serves up HTML.
 
-Tinymce is highly customizable and this add-on takes an options object via `tinymceOptions` in the form. More info below at [Options](#Options).
+By the way, this was completely ripped off of [Texttalk's Angular Schema Form TinyMCE plugin](https://github.com/Textalk/angular-schema-form-tinymce).
 
 Installation
 ------------
 The editor is an add-on to the Bootstrap decorator. To use it, just include
-`bootstrap-tinymce.min.js` *after* `dist/bootstrap-decorator.min.js`.
+`bootstrap-ta.min.js` *after* `dist/bootstrap-decorator.min.js`.
 
 Easiest way is to install is with bower, this will also include dependencies:
 ```bash
-$ bower install angular-schema-form-tinymce
+$ bower install angular-schema-form-text-angular
 ```
 
 You'll need to load a few additional files to use the editor:
@@ -20,62 +20,43 @@ You'll need to load a few additional files to use the editor:
 **Be sure to load this projects files after you load angular schema form**
 
 1. Angular
-2. The [Tinymce](https://github.com/tinymce) source file
-3. The [tx-tinymce](https://github.com/Textalk/tx-tinymce) binder file
-4. **Angular Schema Form**
-5. The Angular Schema Form Tinymce files (this project)
-6. Translation files for whatever language you want to use (optional) [Documentation](http://www.tinymce.com/wiki.php/Configuration:language)
+2. The [TextAngular](https://github.com/fraywing/textAngular) source file
+3. **Angular Schema Form**
+4. The Angular Schema Form TextAngular files (this project)
 
 Example
 
 ```HTML
 <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
 <script type="text/javascript" src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-<script type="text/javascript" src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
-<script type="text/javascript" src="/bower_components/tx-tinymce/tx-tinymce.js"></script>
-
+<script src="bower_components/textAngular/dist/textAngular.js"></script>
+<script src="bower_components/textAngular/dist/textAngularSetup.js"></script>
 <script type="text/javascript" src="/bower_components/angular-schema-form/schema-form.min.js"></script>
-<script type="text/javascript" src="/bower_components/angular-schema-form-tinymce/bootstrap-tinymce.js"></script>
+<script type="text/javascript" src="/bower_components/angular-schema-form-text-angular/bootstrap-ta.js"></script>
 
 ```
 
 When you create your module, be sure to depend on this project's module as well.
 
 ```javascript
-angular.module('yourModule', ['schemaForm', 'schemaForm-tinymce']);
+angular.module('yourModule', ['schemaForm', 'schemaForm-textAngular']);
 ```
 
 Usage
 -----
-The tinymce add-on adds a new form type, `wysiwyg`, and a new default
+The TextAngular add-on adds a new form type, `wysiwyg`, and a new default
 mapping.
 
 |  Form Type     |   Becomes    |
 |:---------------|:------------:|
-|  wysiwyg       |  a tinymce widget |
+|  wysiwyg       |  a TextAngular widget |
 
 
 | Schema             |   Default Form type  |
 |:-------------------|:------------:|
-| "type": "string" and "format": "html"   |   tinymce   |
+| "type": "string" and "format": "html"   |   textangular   |
 
 
 Options
 -------
-The `colorpicker` form takes one option, `tinymceOptions`. This is an object with any
-and all options availible to tinymce. A full list of these can be found [here](http://www.tinymce.com/wiki.php/Configuration).
-
-### Example
-This example replaces the standard toolbar with one we choose.
-
-```javascript
-{
-  "key": "invitation",
-  "tinymceOptions": {
-    "toolbar": [
-      "undo redo | styleselect | bold italic | link image",
-      "alignleft aligncenter alignright"
-    ]
-  }
-},
-```
+Please see [TextAngular](https://github.com/fraywing/textAngular) documentation for applying configuration options.

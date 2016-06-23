@@ -1,12 +1,13 @@
 {
-  "name": "angular-schema-form-tinymce",
+  "name": "angular-schema-form-text-angular",
   "main": [
-    "bootstrap-tinymce.min.js"
+    "bootstrap-ta.min.js"
   ],
   "version": "0.1.0",
   "authors": [
     "Textalk",
-    "Denis Dervisevic <denis@dervisevic.se>"
+    "Denis Dervisevic <denis@dervisevic.se>",
+    "Ben March"
   ],
   "moduleType": [
     "globals"
@@ -17,7 +18,9 @@
     "form",
     "json",
     "json-schema",
-    "schema"
+    "schema",
+    "textAngular",
+    "text-angular"
   ],
   "license": "MIT",
   "ignore": [
@@ -28,8 +31,7 @@
     "coverage"
   ],
   "dependencies": {
-    "tx-tinymce": ">= 0.0.5",
-    "tinymce": ">= 4.0.0"
+    "textAngular": "~1.5.1"
   },
   "devDependencies": {
     "angular-schema-form": ">= 0.7",
