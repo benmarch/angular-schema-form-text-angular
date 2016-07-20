@@ -1,10 +1,12 @@
-<div class="form-group" ng-class="{'has-error': hasError()}">
-  <label class="control-label" ng-show="showTitle()">{{form.title}}</label>
-  <div
-    text-angular="form.tinymceOptions"
-    ng-model="$$value$$"
-    style="background-color: white"
-    schema-validate="form"
-  ></div>
-  <span class="help-block">{{ (hasError() && errorMessage(schemaError())) || form.description}}</span>
+<div class="form-group col-md-12" ng-class="(form.htmlClass || '').split(' ').concat([{'has-error': hasError()}])">
+    <label class="control-label" ng-class="(form.labelHtmlClass || '').split(' ')" ng-show="showTitle()">{{form.title}}</label>
+    <div ng-if="!form.readonly" ng-class="(form.fieldHtmlClass || '').split(' ')">
+        <div text-angular="form.taOptions"
+             ng-model="$$value$$"
+             style="background-color: white"
+             schema-validate="form"
+             ></div>
+    </div>
+    <div ng-if="form.readonly" ng-bind-html="$$value$$" ng-class="(form.fieldHtmlClass || '').split(' ')"></div>
+    <span class="help-block">{{ (hasError() && errorMessage(schemaError())) || form.description}}</span>
 </div>

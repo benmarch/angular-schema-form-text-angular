@@ -14,7 +14,7 @@ angular.module('schemaForm-textAngular', ['schemaForm', 'textAngular']).config(
 
     schemaFormProvider.defaults.string.unshift(wysiwyg);
 
-  //Add to the bootstrap directive
+    //Add to the bootstrap directive
     schemaFormDecoratorsProvider.addMapping('bootstrapDecorator', 'wysiwyg',
     'directives/decorators/bootstrap/textAngular/text-angular.html');
     schemaFormDecoratorsProvider.createDirective('wysiwyg',
